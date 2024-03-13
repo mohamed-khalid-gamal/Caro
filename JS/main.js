@@ -23,7 +23,7 @@ for (i = 0; i < 6; i++) {
     navs.forEach((x) => x.classList.remove("active"));
     navs[0].classList.add("active");
     break;
-  } else {
+  } else if (location.pathname.includes("sproduct")) {
     navs.forEach((x) => x.classList.remove("active"));
     navs[1].classList.add("active");
     break;
