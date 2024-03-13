@@ -27,6 +27,10 @@ for (i = 0; i < 6; i++) {
     navs.forEach((x) => x.classList.remove("active"));
     navs[1].classList.add("active");
     break;
+  } else {
+    navs.forEach((x) => x.classList.remove("active"));
+    navs[0].classList.add("active");
+    break;
   }
 }
 products.forEach((e) => {
