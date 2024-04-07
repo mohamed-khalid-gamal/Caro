@@ -15,7 +15,11 @@ if (bars || close) {
 }
 
 for (i = 0; i < 6; i++) {
-  if (location.pathname.includes(navs[i].textContent.toLocaleLowerCase())) {
+  if (
+    location.pathname.includes(
+      navs[i].textContent.toLocaleLowerCase().trim(" "),
+    )
+  ) {
     navs.forEach((x) => x.classList.remove("active"));
     navs[i].classList.add("active");
     break;
@@ -26,10 +30,6 @@ for (i = 0; i < 6; i++) {
   } else if (location.pathname.includes("sproduct")) {
     navs.forEach((x) => x.classList.remove("active"));
     navs[1].classList.add("active");
-    break;
-  } else {
-    navs.forEach((x) => x.classList.remove("active"));
-    navs[0].classList.add("active");
     break;
   }
 }
