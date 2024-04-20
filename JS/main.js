@@ -13,8 +13,8 @@ if (bars || close) {
     nav.style.width = "0%";
   });
 }
-
-for (i = 0; i < 6; i++) {
+for (i = 0; i < 6; i++)
+{
   if (
     location.pathname.includes(
       navs[i].textContent.toLocaleLowerCase().trim(" "),
