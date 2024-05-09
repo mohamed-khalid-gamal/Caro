@@ -53,7 +53,6 @@ if (imgs) {
   });
 }
 window.onload = function () {
-  loader.style.transform = " translateY(-100%)";
+  loader.style.animation = "load 2s ease-in forwards";
   cont.style.display = "block";
 };
-
