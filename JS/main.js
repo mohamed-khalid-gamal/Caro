@@ -5,6 +5,8 @@ let nav = document.querySelector("#header .navbar");
 let products = document.querySelectorAll(".products .pro");
 let proimg = document.querySelector("#pro-details .images .basic");
 let imgs = document.querySelectorAll("#pro-details .images .alters img");
+let loader = document.querySelector(".p1");
+let cont = document.querySelector(".container-web");
 if (bars || close) {
   bars.addEventListener("click", function () {
     nav.style.width = "40%";
@@ -13,8 +15,7 @@ if (bars || close) {
     nav.style.width = "0%";
   });
 }
-for (i = 0; i < 6; i++)
-{
+for (i = 0; i < 6; i++) {
   if (
     location.pathname.includes(
       navs[i].textContent.toLocaleLowerCase().trim(" "),
@@ -51,3 +52,8 @@ if (imgs) {
     });
   });
 }
+window.onload = function () {
+  loader.style.transform = " translateY(-100%)";
+  cont.style.display = "block";
+};
+
