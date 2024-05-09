@@ -24,7 +24,10 @@ for (i = 0; i < 6; i++) {
     navs.forEach((x) => x.classList.remove("active"));
     navs[i].classList.add("active");
     break;
-  } else if (location.pathname.includes("index") || location.pathname == "/") {
+  } else if (
+    location.pathname.includes("index") ||
+    location.href == "https://mohamed-khalid1907.github.io/Caro/"
+  ) {
     navs.forEach((x) => x.classList.remove("active"));
     navs[0].classList.add("active");
     break;
@@ -53,6 +56,6 @@ if (imgs) {
   });
 }
 window.onload = function () {
-  loader.style.animation = "load 2s ease-in forwards";
+  loader.style.animation = "load 2s 1s ease-in forwards";
   cont.style.display = "block";
 };
